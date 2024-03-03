@@ -1,9 +1,8 @@
 import json
+import requests
 import re
 import sys
 from concurrent.futures import ThreadPoolExecutor
-
-import requests
 
 def check_backlink(backlink, site):
     url = backlink['url'].replace("h4link.duckdns.org", site)
@@ -11,9 +10,9 @@ def check_backlink(backlink, site):
         r = requests.get(url).status_code
     except KeyboardInterrupt:
         sys.exit()
-    except Exception as e:
+    except:
         r = "time out"
-    print(site + " => Backlink Eklendi ==> " + re.search(r'http:\/\/.*?\/', url).group(0).replace("/", "").replace("http:", "") + " status: " + str(r))
+    print(site + " => Backlink Eklendi ==> " + re.search('http:\/\/.*?\/', url).group(0).replace("/", "").replace("http:", "") + " status: " + str(r))
 
 try:
     print("""
