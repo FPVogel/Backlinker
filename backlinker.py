@@ -13,7 +13,7 @@ def check_backlink(backlink, site):
         sys.exit()
     except:
         r = "time out"
-    print(site + " => Backlink Eklendi ==> " + re.search('http:\/\/.*?\/',
+    print(site + " => Backlink Added ==> " + re.search('http:\/\/.*?\/',
           url).group(0).replace("/", "").replace("http:", "") + " status: " + str(r))
 
 
@@ -28,9 +28,9 @@ try:
                                               H4-cklinker - wmdark.com
   """)
     if sys.version_info.major == 3:
-        site = input(" => Backlink Kasilcak Site\t: ")
+        site = input(" => Enter the Site to Check Backlinks\t: ")
     else:
-        site = raw_input(" => Backlink Kasilcak Site\t: ")
+        site = raw_input(" => Enter the Site to Check Backlinks\t: ")
 
     with open("urlbacklinks.json", "r") as file:
         data = json.loads(file.read())

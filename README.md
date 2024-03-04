@@ -1,11 +1,12 @@
 # Backlinker - 3k Url Backlink Generator
 
-USE TOOL;
+TOOL USAGE:
 
- $ git clone https://github.com/h4cklinker/Backlinker.git
- $ cd Backlinker
- $ python backlinker.py
- 
-Wrt. Domain Adress Enter RUN! And Waiting.. / Domaininizi yazıp (siteadresin.com) enter tusunu basip bekleyin.
+$ git clone https://github.com/h4cklinker/Backlinker.git
+$ cd Backlinker
+$ python backlinker.py
 
-![backlink](https://github.com/h4cklinker/Backlinker/blob/master/src1.png?raw=true)
+Enter your domain address and press RUN! Then wait... / Domaininizi yazıp (siteadresin.com) enter tusunu basip bekleyin.
+
+![backlink](https://github.com/FPVogel/Backlinker/blob/master/src1.png?raw=true)
+
