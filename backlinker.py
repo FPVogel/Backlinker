@@ -4,6 +4,7 @@ import re
 import sys
 from concurrent.futures import ThreadPoolExecutor
 
+
 def check_backlink(backlink, site):
     url = backlink['url'].replace("h4link.duckdns.org", site)
     try:
@@ -12,7 +13,9 @@ def check_backlink(backlink, site):
         sys.exit()
     except:
         r = "time out"
-    print(site + " => Backlink Eklendi ==> " + re.search('http:\/\/.*?\/', url).group(0).replace("/", "").replace("http:", "") + " status: " + str(r))
+    print(site + " => Backlink Eklendi ==> " + re.search('http:\/\/.*?\/',
+          url).group(0).replace("/", "").replace("http:", "") + " status: " + str(r))
+
 
 try:
     print("""
@@ -37,4 +40,3 @@ try:
 except Exception as e:
     print("\n\n => exit\n")
     print(e)
-
